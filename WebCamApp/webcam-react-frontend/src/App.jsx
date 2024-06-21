@@ -21,7 +21,7 @@ function App() {
 
     return (
         imageSrc ? 
-            <div class="row">
+            <div className="row">
                 {imageSrc &&
                     <img src={imageSrc} alt="Source Image from WebSocket"/>
                 }
