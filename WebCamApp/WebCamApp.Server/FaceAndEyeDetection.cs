@@ -73,5 +73,12 @@ namespace WebCamApp.Server
 
             return data;
         }
+
+        public Mat Base64ToMat(string imageURL)
+        {
+            string encodedImage = imageURL.Split(',')[1];
+            byte[] bytes = System.Convert.FromBase64String(encodedImage);
+            return Cv2.ImDecode(bytes, ImreadModes.Color);
+        }
     }
 }

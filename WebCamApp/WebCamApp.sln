@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DetectionTest", "DetectionT
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "webcam-react-frontend", "webcam-react-frontend\webcam-react-frontend.esproj", "{A1BC97A9-72D0-4464-BB01-B12FB00DDCDD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFApp", "WPFApp\WPFApp.csproj", "{DE05D31F-A227-4A30-A713-7B2FF9C67C54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,18 @@ Global
 		{A1BC97A9-72D0-4464-BB01-B12FB00DDCDD}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1BC97A9-72D0-4464-BB01-B12FB00DDCDD}.Release|x86.Build.0 = Release|Any CPU
 		{A1BC97A9-72D0-4464-BB01-B12FB00DDCDD}.Release|x86.Deploy.0 = Release|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Debug|x64.Build.0 = Debug|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Debug|x86.Build.0 = Debug|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Release|x64.ActiveCfg = Release|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Release|x64.Build.0 = Release|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE05D31F-A227-4A30-A713-7B2FF9C67C54}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

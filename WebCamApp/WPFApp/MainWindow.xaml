@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="640">
+    <Grid>
+        <Grid Margin="0,0,0,0">
+            <TextBlock 
+                FontSize="18"
+                TextAlignment="Center"
+            >Recognition</TextBlock>
+            <wv2:WebView2 x:Name="wpfWebview" Margin="421,99,0,170"/>
+            <Image x:Name="videoImage" Width="480" Height="360" Margin="157,34,3,70" />
+        </Grid>
+
+        <Grid Width="120" Height="100" HorizontalAlignment="left">
+            <Button x:Name="createAnswerBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30">
+                <TextBlock>Create Answer</TextBlock>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
