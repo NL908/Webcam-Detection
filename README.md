@@ -33,7 +33,7 @@ How to Run:
 
 Press 'F5' or click the 'Start' button in Visual Studio to run the WPF App.
   
-4. Using Chrome or Edge to open browser.html for the browser-end.
+4. Using Chrome or Edge to open WebCamApp/WPFApp/browser.html for the browser-end.
 
 5. Allow camera access, now should there be a webcam feed in the browser.
 
