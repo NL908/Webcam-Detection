@@ -41,9 +41,9 @@ namespace WPFApp
             var environment = await CoreWebView2Environment.CreateAsync();
             await wpfWebview.EnsureCoreWebView2Async(environment);
 
-            string htmlPath = System.IO.Path.GetFullPath(@"Assets\webpage.html");
-            wpfWebview.Source = new Uri(htmlPath);
-            /*
+            //string htmlPath = System.IO.Path.GetFullPath(@"Assets\webpage.html");
+            //wpfWebview.Source = new Uri(htmlPath);
+
             string htmlContent = @"
                 <body>
                     <script type='text/javascript'>
@@ -53,6 +53,7 @@ namespace WPFApp
                         let answer;
                         let imageCapture;
                         let canvas;
+                        let captureFrameInterval;
 
                         let init = async () => {
                             remoteStream = new MediaStream();
@@ -67,16 +68,21 @@ namespace WPFApp
                                 if (peerConnection.connectionState === 'connected') {
                                     startCaptureFrame();
                                 }
+                                else if (peerConnection.connectionState === 'disconnected' || peerConnection.connectionState === 'closed') {
+                                    clearInterval(captureFrameInterval);
+                                }
                             };
                         }
 
                         let createAnswer = async (message) => {
-                            offer = message
+                            offer = message;
 
                             peerConnection.onicecandidate = async (event) => {
-                                //Event that fires off when a new answer ICE candidate is created
                                 if (event.candidate) {
                                     window.chrome.webview.postMessage(peerConnection.localDescription);
+                                    const data = {};
+                                    data[""message""] = ""Answer copied to clipboard. Connection State: "" + peerConnection.connectionState;
+                                    window.chrome.webview.postMessage(data);
                                 }
                             };
 
@@ -87,10 +93,10 @@ namespace WPFApp
                         }
 
                         let startCaptureFrame = async () => {
-                            const tracks = remoteStream.getVideoTracks()
-                            imageCapture = new ImageCapture(tracks[0])
+                            const tracks = remoteStream.getVideoTracks();
+                            imageCapture = new ImageCapture(tracks[0]);
                             canvas = document.createElement('canvas');
-                            setInterval(captureFrame, 33)
+                            captureFrameInterval = setInterval(captureFrame, 33);
                         }
 
                         let captureFrame = async () => {
@@ -99,7 +105,7 @@ namespace WPFApp
                                 canvas.width = imageBitmap.width;
                                 canvas.height = imageBitmap.height;
                                 canvas.getContext(""2d"").drawImage(imageBitmap, 0, 0);
-                                const data = {}
+                                const data = {};
                                 data[""image""] = canvas.toDataURL('image/png');
                                 window.chrome.webview.postMessage(data);
                             })
@@ -111,7 +117,7 @@ namespace WPFApp
                 </body>";
 
             wpfWebview.NavigateToString(htmlContent);
-            */
+
             wpfWebview.WebMessageReceived += WpfWebview_WebMessageReceived;
 
             createAnswerBtn.Click += CreateAnswerBtn_Click;

@@ -13,7 +13,7 @@
                 FontSize="18"
                 TextAlignment="Center"
             >Recognition</TextBlock>
-            <wv2:WebView2 x:Name="wpfWebview" Margin="421,99,0,170"/>
+            <wv2:WebView2 x:Name="wpfWebview" Margin="578,410,0,0"/>
             <Image x:Name="videoImage" Width="480" Height="360" Margin="157,34,3,70" />
         </Grid>
 
