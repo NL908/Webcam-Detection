@@ -30,7 +30,6 @@ How to Run:
 2. Restore NuGet dependencies.
 
 3. Open solution property by right click on the solution, go to "Properties", under "Common Properties" select "Startup Project", select "Single startup projectPress" and select "WPFApp".
-
 Press 'F5' or click the 'Start' button in Visual Studio to run the WPF App.
   
 4. Using Chrome or Edge to open WebCamApp/WPFApp/browser.html for the browser-end.
